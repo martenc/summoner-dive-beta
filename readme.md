@@ -42,7 +42,7 @@ It's a simple NEH app (Nodejs, Express, Handlebars), so all you'll need is the f
 ## Installation
 
 1. Specify your own api key within the key.js found in the config directory
-2. If you're hosting your app on heroku (or similar) you can specify the environmental variable containing your key. Otherwise you can hard code them in the key.js file ...but be sure to keep them safe and secret!
+2. If you're hosting your app on something like heroku or similar I'd recommend creating an environmental variable containing your key (see my config/key.js file as an example). Otherwise you can hard code them in the key.js file ...but be sure to keep them safe and secret!
 3. I've provided a notes.txt file as well to help you along with some example endpoints
 4. Enjoy!
 
