@@ -1,0 +1,49 @@
+
+
+Legal...
+[The title of Your Application] isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+
+
+General app guidelines...
+This is a simple app, but Riot Games encourages:
+- Think outside the box
+- Think of ways for players to evaluate and improve their own gameplay
+- Think of ways to connect players with their friends
+- Blow our minds (it’s encouraged)
+- Feel free to use any of our art assets from the game (but NOT any official Logos)
+
+
+Take home assignment...
+What this app does in a nutshell:
+- Connects to the Riot Games API
+- Provide a mechanism for the user to specify a summoner name
+https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/riotschmick?api_key=
+
+- Retrieve the most recent match history for that summoner
+https://na.api.pvp.net/api/lol/na/v2.2/matchhistory/585897?api_key=
+
+- Report on the wins/losses for that summoner
+https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/585897/summary?api_key=
+
+- Provide visibility into what champions that summoner played
+https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/585897/ranked?api_key=
+https://na.api.pvp.net/api/lol/static-data/na/v1.2/champion/90?api_key=
+
+
+Misc. notes...
+
+RiotSchmick
+585897
+
+/api/lol/{region}/v2.2/matchhistory/{summonerId}
+https://na.api.pvp.net/api/lol/na/v2.2/matchhistory/585897?api_key=
+
+/api/lol/{region}/v2.2/match/{matchId}
+https://na.api.pvp.net/api/lol/na/v2.2/match/1749315593?api_key=
+
+stats summary
+https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/585897/summary?api_key=
+
+stats ranked
+https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/585897/ranked?api_key=
+

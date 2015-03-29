@@ -1,0 +1,275 @@
+@font-face{font-family:"AlternateGothicW02-No2D";
+  src:url(../fonts/26e0d60f-f62d-4ca6-b7c9-da4b4b0faea9.eot?#iefix);
+  src:url(../fonts/26e0d60f-f62d-4ca6-b7c9-da4b4b0faea9.eot?#iefix) format("eot"),
+  url(../fonts/e3d0ecf4-a6ca-4be4-8fee-4cfe85fd7c5a.woff) format("woff"),
+  url(../fonts/a2e0e0cf-0ff9-4fb4-bb7e-28ee13cbc37c.ttf) format("truetype"),
+  url(../fonts/cc1f9791-cf49-4f20-9048-900f71cb652d.svg#cc1f9791-cf49-4f20-9048-900f71cb652d) format("svg");}
+
+body {
+  /*background: #000;*/
+  background-color: #2c3e50;
+  /*color: #FFF;*/
+  font-family: 'Helvetica',Arial,sans-serif;
+  line-height: 1.5;
+  /*font-size: 18px;*/
+  /*background: url("../img/psychedelic_pattern_@2X.png"); }*/
+  /*background: center fixed linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../img/League-of-legends-Wallpaper-narrow.jpg"); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% auto;}*/
+  background: #000 url('../img/riot_background.jpg') no-repeat center top;
+}
+
+body.details {
+  background-color: #2c3e50;
+  background: #000 url('../img/riot_background.jpg') no-repeat center top;
+  color: #FFF;
+}
+
+.body.container {
+  background-color: #FAFAFA;
+  padding: 25px 30px;
+  -webkit-border-bottom-right-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  box-shadow: 0px 16px 20px 6px #000000;
+  -moz-box-shadow: 0px 16px 20px 6px #000000;
+  -webkit-box-shadow: 0px 16px 20px 6px #000000;
+  filter: progid:DXImageTransform.Microsoft.Shadow(strength= 16,direction = 180,color = '#000000');
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(strength = 16,Direction = 180,Color = '#000000')";
+}
+a {color: #B40404;
+  text-decoration: none;}
+a:hover {color: #FF0000; }
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  width: 940px;
+}
+
+h1, h2, h3{
+  font-family:'AlternateGothicW02-No2D',Arial,sans-serif;
+  color:#FFF;
+  font-size: 5vw;
+  font-weight:normal;
+  text-transform:uppercase;}
+
+h1 {
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+h2{
+  font-size: 3vw;
+  margin-bottom: 5px;}
+
+h3{
+  font-size: 2.5vw;
+  margin-bottom: 5px;}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 35px auto;
+  padding: 10px; }
+
+#search-form {
+  display: block;
+  margin-bottom: 10px; }
+  #search-form .search-field {
+    position: relative;
+    float: left;
+    display: block;
+    width: 80%;
+    height: 65px;
+    padding: 10px 10px;
+    padding-right: 30px;
+    background-color: #fff;
+    font-size: 20px;
+    color: #ccc;
+    border: 4px solid #f4f4f4;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    transition: all 0.4s linear; }
+  #search-form .search-field:focus {
+    outline: none;
+    color: #252525;
+    -webkit-box-shadow: 0 0 0 10px #999;
+    -moz-box-shadow: 0 0 0 10px #999;
+    box-shadow: 0 0 10px #999; }
+  #search-form .search-button {
+    width: 20%;
+    height: 64px;
+    padding: 10px 15px 11px;
+    font-size: 18px;
+    background-color: #666666;
+    color: #ffffff;
+    border: 1px solid #666666;
+    cursor: pointer;
+    transition: background-color 0.5s ease; }
+    #search-form .search-button:hover {
+      background-color: #B40404; }
+    @media (max-width: 768px) {
+      #search-form .search-button {
+        padding: 10px 7px 11px;
+        font-size: 14px; } }
+
+#results-container {
+  position: relative;
+  width: 100%; }
+  #results-container .item {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    transition: background .5s ease; }
+    #results-container .item .summoner-name, #results-container .item .summoner-id {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      float: left; }
+      #results-container .item .summoner-name span, #results-container .item .summoner-id span {
+        position: relative;
+        line-height: 50px;
+        margin-left: 5%; }
+        @media (max-width: 768px) {
+          #results-container .item .summoner-name span, #results-container .item .summoner-id span {
+            top: 30%;
+            font-size: 2.7vw;
+            margin-bottom: 2%;
+            margin-left: 1%;
+            display: block !important;
+            display: -webkit-box !important;
+            max-width: 90%;
+            height: 3.5vw;
+            line-height: 1.4;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            text-overflow: ellipsis; } }
+    #results-container .item:hover {
+      background: #bebebe; }
+  #results-container .item:nth-of-type(odd) {
+    background-color: #666666; }
+    #results-container .item:nth-of-type(odd):hover {
+      background: #B40404; }
+
+.footer {
+  padding-top: 100px;
+  font-size: 1vw;
+  color: #999;
+  font-weight: lighter;
+}
+
+#overlay-container {
+  display: none;
+  position: fixed;
+  width: 80%;
+  height: auto;
+  min-height: 500px;
+  top: 20%;
+  left: 10%;
+  background: #fff;
+  z-index: 200; }
+  @media (max-width: 768px) {
+    #overlay-container {
+      max-height: 350px; } 
+      h1, h2, h3{font-size: 6vw;}
+      h2{font-size: 5vw;}
+      h3{font-size: 3vw;}
+      .footer {font-size: 2vw;
+        color:#FFF;}
+    }
+  #overlay-container .modal {
+    position: relative;
+    width: 90%;
+    left: 5%;
+    top: 5%; }
+    #overlay-container .modal .modal-close {
+      position: relative;
+      top: 0;
+      left: 0;
+      color: #fff;
+      cursor: pointer;
+      transition: color .5s ease;
+      margin-top: -50px;
+      margin-right: -5.5%;
+      float: right; }
+      #overlay-container .modal .modal-close:hover {
+        color: #bebebe; }
+    #overlay-container .modal .modal-name {
+      position: relative;
+      width: 100%;
+      font-size: 3.5vw;
+      margin-top: 30px;
+      color: #666; }
+      @media (max-width: 768px) {
+        #overlay-container .modal .modal-name {
+          font-size: 9vw; 
+          color: #666; } }
+    #overlay-container .modal .modal-id {
+      position: relative;
+      width: 100%;
+      color: #666;
+      font-size: 1.5vw; }
+      @media (max-width: 768px) {
+        #overlay-container .modal .modal-id {
+          font-size: 4vw; 
+          color: #666; } }
+      #overlay-container .modal .modal-id a {
+        color: #bebebe;
+        transition: color 0.5s ease;
+        text-decoration: none; }
+        #overlay-container .modal .modal-id a:hover {
+          color: #B40404; }
+    #overlay-container .modal .modal-text {
+      position: relative;
+      width: 100%;
+      float: left;
+      margin-bottom: 3%;
+      font-size: 1.5vw; 
+      color: #666; }
+      @media (max-width: 768px) {
+        #overlay-container .modal .modal-text {
+          font-size: 3.5vw; } }
+      #overlay-container .modal .modal-text a {
+        color: #FF0000;
+        transition: color 0.5s ease;
+        text-decoration: none; }
+        #overlay-container .modal .modal-text a:hover {
+          color: #B40404; }
+
+.modal-cover {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.7); }

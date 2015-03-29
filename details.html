@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Summoner Dive</title>
+	<link rel="stylesheet" href="../../assets/css/normalize.css">
+	<link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body class="details">
+
+<a href="https://github.com/martenc/summoner-dive-beta" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+
+	<div class="container">
+		<h1>{{Name}}</h1>
+
+		<h2>Summary Stats</h2>
+		
+		<!-- <a href="#" id="matches-trigger">Show/Hide</a><br> -->
+		<div id="summoner-stats">
+
+			{{#each playedChampions.champions}}
+				{{#ifCond this.id 0}}
+					Total Sessions Played:  {{this.stats.totalSessionsPlayed}}<br>
+					Total Sessions Lost:  {{this.stats.totalSessionsLost}}<br>
+					Total Sessions Won:  {{this.stats.totalSessionsWon}}<br>
+					Total Champion Kills:  {{this.stats.totalChampionKills}}<br>
+					Total Killing Sprees:  {{this.stats.killingSpree}}<br>
+					Most Champion Kills Per Session:  {{this.stats.mostChampionKillsPerSession}}<br>
+					Total Damage Dealt:  {{this.stats.totalDamageDealt}}<br>
+					Total Damage Taken:  {{this.stats.totalDamageTaken}}<br>
+				{{/ifCond}}
+			{{/each}}
+
+
+		<h2>Recent matches</h2>
+		
+		<!-- <a href="#" id="matches-trigger">Show/Hide</a><br> -->
+		<div id="match-history">
+
+			{{#each matchHistory.matches}}
+				<div>Match ID: <a href="#">{{this.matchId}}</a></div>
+				<div>Season: {{this.season}}</div>
+				<div>Match Mode: {{this.matchMode}}</div>
+				<div>Type: {{this.queueType}}</div>
+				<div>Duration: {{this.matchDuration}}</div>
+				<br>&nbsp;
+			{{/each}}
+
+		</div>
+	
+
+		<h2>Ranked Stats</h2>
+
+			{{#each summonerStats.playerStatSummaries}}
+				<div>Summary Type: {{this.playerStatSummaryType}}</div>
+				<div>Wins: {{this.wins}}</div>
+				<div>Loses: {{this.losses}}</div>
+				<!-- <div>Date: {{this.modifyDate}}</div> -->
+				<br>&nbsp;
+			{{/each}}
+		</div>
+
+
+		<h2>Champions Played</h2>
+
+		{{#each playedChampions.champions}}
+			{{#ifCond this.id 0}}
+			{{else}}
+				<div class="champion-name" data-champion-id="{{this.id}}">Champion: </div>
+				<div>Total Sessions Played: {{this.stats.totalSessionsPlayed}}</div>
+				<div>Total Sessions Lost: {{this.stats.totalSessionsLost}}</div>
+				<div>Total Sessions Won: {{this.stats.totalSessionsWon}}</div><br>
+			{{/ifCond}}
+		{{/each}}
+
+
+		<div class="footer">
+		Summoner Dive isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+		</div>
+	</div>
+	<div class="modal-cover"></div>
+
+	<!--Dependencies-->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+	<script src="../../assets/js/detail.js"></script>
+</body>
+</html>

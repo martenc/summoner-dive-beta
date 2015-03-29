@@ -1,0 +1,29 @@
+{
+  "name": "summoner-dive-beta",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.html",
+  "dependencies": {
+    "express": "*",
+    "handlebars-helpers": "^0.5.8",
+    "hbs": "~3.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martenc/summoner-dive-beta"
+  },
+  "author": "Marten Compoc",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "http://summoner-dive.herokuapp.com",
+  "subdomain": "",
+  "engines": {
+    "node": "0.10.x"
+  }
+}
