@@ -14,6 +14,7 @@ exports.getSummonerByName = function(req, res) {
 		 'GET', {
 				api_key: riot_api_key
 			}, function(data) {
+				if(data === '') { res.render('./error.html'); return;}
 				res.send(data);
 			});
 }
@@ -25,6 +26,7 @@ exports.getChampions = function(req, res) {
 		 'GET', {
 				api_key: riot_api_key
 			}, function(data) {
+				if(data === '') { res.render('./error.html'); return;}
 				res.send(data);
 			});
 }

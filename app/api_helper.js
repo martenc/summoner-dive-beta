@@ -1,6 +1,6 @@
 /*
 
-  Generally helpful for making https calls to your api
+  Generally helpful method for making https calls to your api
 
 */
 
@@ -37,9 +37,14 @@ exports.performRequest = function(host, endpoint, method, data, success) {
     });
 
     res.on('end', function() {
-      // console.log(responseString);
-      var responseObject = JSON.parse(responseString);
-      success(responseObject);
+      //console.log(responseString);
+      var responseObject = '';
+      try {
+        responseObject = JSON.parse(responseString);
+      } catch(err) {
+        console.log('ERROR CALLING RIOT API: '+responseString);
+      }
+      success(responseObject);      
     });
   });
 
