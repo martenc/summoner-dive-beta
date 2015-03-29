@@ -29,7 +29,7 @@ https://na.api.pvp.net/api/lol/static-data/na/v1.2/champion/90?api_key=<your_key
 
 
 
-It's simple a NEH app (Nodejs, Express, Handlebars), so all you'll need is the following to get going...
+It's a simple NEH app (Nodejs, Express, Handlebars), so all you'll need is the following to get going...
 
 
 ## Configuration
