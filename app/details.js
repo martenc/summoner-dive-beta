@@ -18,25 +18,25 @@ exports.getSummonerDetailsByID = function(req, res) {
 		 'GET', {
 				api_key: riot_api_key
 			}, function(matchHistoryData) {
-				if(matchHistoryData === '') { res.render('./error.html'); return;}
+				if(matchHistoryData === '') { res.render('../views/error.html'); return;}
 
 				var stats = apihelper.performRequest(host, 
 				'/api/lol/na/v1.3/stats/by-summoner/' +summonerId+ '/summary',
 				 'GET', {
 						api_key: riot_api_key
 					}, function(statsData) {
-						if(statsData === '') { res.render('./error.html'); return;}
+						if(statsData === '') { res.render('../views/error.html'); return;}
 						
 						var champions = apihelper.performRequest(host, 
 						'/api/lol/na/v1.3/stats/by-summoner/' +summonerId+ '/ranked',
 						 'GET', {
 								api_key: riot_api_key
 							}, function(championsData) {
-								if(championsData === '') { res.render('./error.html'); return;}
+								if(championsData === '') { res.render('../views/error.html'); return;}
 								
 								// console.log(statsData);
 
-								res.render('./details.html', {
+								res.render('../views/details.html', {
 									Name: summonerName, 
 									matchHistory: matchHistoryData,
 									summonerStats: statsData,

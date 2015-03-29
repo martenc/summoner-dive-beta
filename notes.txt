@@ -17,33 +17,39 @@ Take home assignment...
 What this app does in a nutshell:
 - Connects to the Riot Games API
 - Provide a mechanism for the user to specify a summoner name
-https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/riotschmick?api_key=
+https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/riotschmick?api_key=<you_api_key>
 
 - Retrieve the most recent match history for that summoner
-https://na.api.pvp.net/api/lol/na/v2.2/matchhistory/585897?api_key=
+https://na.api.pvp.net/api/lol/na/v2.2/matchhistory/585897?api_key=<you_api_key>
 
 - Report on the wins/losses for that summoner
-https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/585897/summary?api_key=
+https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/585897/summary?api_key=<you_api_key>
 
 - Provide visibility into what champions that summoner played
-https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/585897/ranked?api_key=
-https://na.api.pvp.net/api/lol/static-data/na/v1.2/champion/90?api_key=
+https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/585897/ranked?api_key=<you_api_key>
+https://na.api.pvp.net/api/lol/static-data/na/v1.2/champion/90?api_key=<you_api_key>
 
 
 Misc. notes...
 
+/api/lol/{region}/v2.2/matchhistory/{summonerId}
+https://na.api.pvp.net/api/lol/na/v2.2/matchhistory/585897?api_key=<you_api_key>
+
+
+
+/api/lol/{region}/v2.2/match/{matchId}
+https://na.api.pvp.net/api/lol/na/v2.2/match/1749315593?api_key=<you_api_key>
+
+
 RiotSchmick
 585897
 
-/api/lol/{region}/v2.2/matchhistory/{summonerId}
-https://na.api.pvp.net/api/lol/na/v2.2/matchhistory/585897?api_key=
 
-/api/lol/{region}/v2.2/match/{matchId}
-https://na.api.pvp.net/api/lol/na/v2.2/match/1749315593?api_key=
 
 stats summary
-https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/585897/summary?api_key=
+https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/585897/summary?api_key=<you_api_key>
+
 
 stats ranked
-https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/585897/ranked?api_key=
+https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/585897/ranked?api_key=<you_api_key>
 

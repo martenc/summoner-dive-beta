@@ -4,24 +4,34 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<title>Summoner Dive</title>
-	<link rel="stylesheet" href="../../assets/css/normalize.css">
-	<link rel="stylesheet" href="../../assets/css/styles.css">
+	<link rel="stylesheet" href="/public/assets/css/normalize.css">
+	<link rel="stylesheet" href="/public/assets/css/styles.css">
 </head>
 <body>
 <a href="https://github.com/martenc/summoner-dive-beta" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
 	<div class="container">
-		<h1>Ouch...!</h1>
-		<h2>Apologies, we've run into some kind of error</h2>
-		
+		<h1>Summoner Dive</h1>
+		<h2>Specify Summoner's name (NA Region only):</h2>
+		<form id="search-form" name="search-form"  action="/">
+			<input class="search-field" type="text" name="search-term" placeholder="e.g. RiotSchmick" required>
+			<input class="search-button" type="submit" name="search-button" value="GO!">
+		</form>
+
+		<div id="results-container"></div>
+
+		<div id="overlay-container"></div>
+	
 		<div class="footer">
-		Details: Error calling Riot API. Fear not, everything has been logged and we'll become aware of the situation. Soon.</div>
+		Summoner Dive isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+		</div>
 	</div>
 	<div class="modal-cover"></div>
 
 	<!--Dependencies-->
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-
+	<!--App-->
+	<script src="/public/assets/js/app.js"></script>
 </body>
 </html>

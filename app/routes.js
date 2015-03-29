@@ -3,7 +3,7 @@ module.exports = function(app, api, details) {
 	// PAGE ROUTES =============================================================
 	// home
 	app.get('/', function(req, res) {
-	    res.render('index.html');
+	    res.render('../views/index.html');
 	});
 
 	// summoner deails

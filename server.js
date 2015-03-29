@@ -8,7 +8,7 @@ var details = require('./app/details.js');
 // configuration ======================================================
 app.use(express.static(__dirname));
 app.engine('html', require('hbs').__express);
-app.set('views', __dirname + '/');
+app.set('views', __dirname + '/public');
 app.set('view engine', 'html');
 
 // routes =============================================================
