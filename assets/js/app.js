@@ -51,10 +51,15 @@
                 type: 'GET',
                 url : apiPageUrl,
                 dataType: 'json',
-                success: function(data) {
-	                riotGet.setData(data, searchName);
-	                // console.log(data);
-	            }   
+                success: function(data, textStatus, xhr) {
+                	//console.log(data);
+                	riotGet.setData(data, searchName);
+	            },
+	            error: function(XMLHttpRequest, textStatus, errorThrown) { 
+        			// console.log("Status: " + textStatus); 
+        			// console.log("Error: " + errorThrown); 
+        			riotGet.el.$resultsContainer.append('<h3>Sorry, no summoners by this name were found.</h3>');
+        		}
             });  
 		},
 		retrieveData: function(searchName) {
@@ -66,9 +71,8 @@
 			}
 		},
 		setData: function(data, searchName) {
-			if (data.length === 0) {
-				riotGet.el.$resultsContainer.append('<h3>Sorry, no summoners by this name were found.</h3>');
-			}
+			//console.log(data);
+			
 			$.each(data, function() {
 
                 var summonerName  	= this.name,
@@ -113,7 +117,7 @@
 		},
 		openModal: function(dataName, dataId, dataLevel, dataRevDate) {
 
-			modalContent = '<div class="modal"><div class="modal-close">X</div><div class="modal-name">'+dataName+'</div><br><div class="modal-id">ID: '+dataId+'</div><br><hr /><br><br><div class="modal-lang modal-text">Level: '+dataLevel+'</div><div class="modal-url modal-text">Last Activity: '+dataRevDate+'</div><br><br><div class="modal-desc modal-text"><a href="summoner/' +dataId+ '/' +dataName+ '" class="match-details"><b>Now dive into the details!</b></a><br>(e.g. match history, wins/losses, champions played)</div></div>';
+			modalContent = '<div class="modal"><div class="modal-close">X</div><div class="modal-name">'+dataName+'</div><div class="modal-id">ID: '+dataId+'</div><hr /><br><div class="modal-lang modal-text">Level: '+dataLevel+'</div><div class="modal-url modal-text">Last Activity: '+dataRevDate+'</div><br><br><div class="modal-desc modal-text"><a href="summoner/' +dataId+ '/' +dataName+ '" class="match-details"><b>Now dive into the details!</b></a><br>(e.g. match history, wins/losses, champions played)</div></div>';
 
 
 			riotGet.el.$overlayContainer.append(modalContent);
